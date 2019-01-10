@@ -1,11 +1,29 @@
-import React from 'react';
-class LandingPage extends React.Component {
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+  root: {
+    width: '100%',
+    maxWidth: 500,
+  },
+};
+
+class LandingPage extends Component {
+
   render() {
     return(
       <div>
-        <h1 className='section'>Hello World</h1>
+        <Typography>Hello World</Typography>
       </div>
     )
   }
+
 }
-export default LandingPage
+
+LandingPage.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(LandingPage);
