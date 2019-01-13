@@ -7,15 +7,15 @@ import Routes from './routes';
 import configureStore from './store';
 
 
-// const store = configureStore();
+const store = configureStore();
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    // <Provider store={store}>
-      // <BrowserRouter>
-        <Routes/>,
-      // </BrowserRouter>
-    // </Provider>,
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes/>
+      </BrowserRouter>
+    </Provider>,
     document.getElementById('app'),
   )
 });

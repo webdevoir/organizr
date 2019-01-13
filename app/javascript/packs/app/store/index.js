@@ -7,10 +7,10 @@ import {createEpicMiddleware} from 'redux-observable';
 import {routerMiddleware} from 'react-router-redux';
 
 import rootReducer from './reducers';
-// import rootEpic from './epics';
+import rootEpic from './epics';
 
 
-// const epicMiddleware = createEpicMiddleware(rootEpic);
+const epicMiddleware = createEpicMiddleware();
 
 export default function configureStore (history, initialState) {
   const store = createStore(
@@ -18,9 +18,9 @@ export default function configureStore (history, initialState) {
     initialState,
     applyMiddleware(
       routerMiddleware(history),
-      // epicMiddleware
+      epicMiddleware
     ),
   );
-
+  epicMiddleware.run(rootEpic);
   return store;
 }

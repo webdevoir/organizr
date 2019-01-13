@@ -4,12 +4,15 @@ import {
   Route,
 } from 'react-router-dom'
 
-import LandingPage from './routes/scenes/landingPage';
+import Main from './routes/scenes/main';
+import Menu from './routes/interface/menu';
+
 
 const App = (props) => (
   <Router>
     <div>
-      <Route exact path='/' component={LandingPage} />
+      <Menu/>
+      <Route exact path='/' component={Main} />
     </div>
   </Router>
 )
