@@ -41,9 +41,9 @@ export default function (state = initialState, {type, payload}) {
         // .set('isLoggedIn', true)
         // .set('permissions', core.parsePermissionsPayload(payload.permissions));
 
-    case TOKEN_LOGIN:
-      console.log(type, payload);
-      return state;
+    // case TOKEN_LOGIN:
+    //   console.log(type, payload);
+    //   return state;
 
     case TOKEN_LOGIN_FAILURE:
     case TOKEN_LOGIN_NO_KEY:

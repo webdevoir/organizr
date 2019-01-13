@@ -12,6 +12,7 @@ export function loginRequest (payload) {
 }
 
 export function tokenLoginRequest() {
+  console.log('TOKEN LOGIN REQUEST IN BACKEND');
   return getReq('/api/v1/session', getAuthToken());
 }
 

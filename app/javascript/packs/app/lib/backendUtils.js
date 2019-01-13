@@ -1,3 +1,4 @@
+import * as Rx from 'rxjs';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/dom/ajax';
 import 'rxjs/add/operator/map';
