@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   root "pages#root"
 
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  post '/login', to: 'auth#login'
+  post '/users/create', to: 'users#create'
 
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
 end
